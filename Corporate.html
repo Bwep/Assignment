@@ -3,54 +3,59 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-      <link rel="stylesheet" href="CorporatePage.css">
+    <link rel="stylesheet" href="Corporate.css">
+
   </head>
   <body>
-    <div>
-      <ul id="nav-header"> <!--nav bar header -->
-        <li class="nav-section active">
-          <a href="#" class="nav-section-text webname">HOME</a>
-        </li>
-        <li class="nav-section">
-          <a href="#" class="nav-section-text">ABOUT</a> <!--nav bar section -->
-        </li>
-        <li class="nav-section">
-          <a href="#" class="nav-section-text">CONTACT</a> <!--nav bar section -->
-        </li>
-        <li class="nav-section">
-          <a href="#" class="nav-section-text">FEEDBACK</a> <!--nav bar section -->
-        </li>
-      </ul> <!--end of header -->
-    </div> <!-- end top nav cointainer-->
-    <div>
-      <ul id="nav-header"> <!--nav bar header -->
-        <li class="nav-section active">
-          <a href="MainPage.html" class="nav-section-text">CORPORATE TEMPLATES</a>
-        </li>
-        </ul>
-
-    </div> <!-- end top nav cointainer-->
-
-    <div id="bg-img"> <!-- bg image container-->
-    <h1> SELECT YOUR DESIRED TEMPLATES </h1>
-
-    <!--<img src="Informal1.png" class="temp1"> <!--Formal Template 1-->
-
-    <!--<img src="Balloons.png" class="temp2"> <!--Formal Template 2-->
+<div id="bg-img">
+    <h1 id="title"><center>CORPORATE</h1></center>
 
 
-</div>
+    <center>
+     <div class="gambar" >
+      <a href="card-1.html">  <img src="card-1.png" style="width:30%"  > </a>
+        <a href="card-2.html">  <img src="card-2.png" style="width:30%"  ></a>
 
+      </div>
+    </center>
 
+      </div>>
 
+  </div>
 
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn"><img src="Button.png"></button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="FormalPage.html"> Formal Template </a>
+      <a href="InformalPage.html"> Informal Template </a>
+    </div>
+  </div>
+  <script>
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 
   <footer>
-    <div class="border">
+    <div>
     </div>
   </footer>
 
-  </body> <!-- end bg container-->
+  </body>
 
   </body>
 </html>
