@@ -5,6 +5,10 @@
 body{
   margin: 0 auto;
   font-family: serif;
+  background: url("background2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #nav-header{
@@ -13,6 +17,7 @@ body{
   padding: 0;
   width: 100%;
 }
+
 
 .nav-section{
   background: #1d1d1d;
@@ -47,14 +52,10 @@ body{
 }
 
 #bg-img{
-  background: url("background2.jpg");
   display: block;
   float: left;
   width: 100%;
   height: 80vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 
@@ -65,6 +66,10 @@ body{
   text-align: center;
   font-size: 25px;
   letter-spacing: 5px;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-areas:
+  "one two three";
 }
 
 .cover-text{
@@ -104,4 +109,24 @@ h1{
   color: white;
   text-align: center;
   font-size: 30px;
+}
+
+@media screen and (max-width: 600px){ /*mobile view*/
+  #cover-btn-div{
+    grid-template-areas:
+    "one"
+    "two"
+    "three";
+  }
+
+  #nav-header{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .nav-section a {
+    font-size: 10px;
+  }
 }
