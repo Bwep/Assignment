@@ -1,144 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Corporate emplate</title>
-    <link rel="stylesheet" href="CorporatePage.css">
-    <script>
-      /*background color change*/
-      function white(){
-        document.getElementById("cont").style.backgroundColor = "white";
-      }
-
-      function blue(){
-        document.getElementById("cont").style.backgroundColor = "lightblue";
-      }
-
-      function yellow(){
-        document.getElementById("cont").style.backgroundColor = "#FFFF99";
-      }
-
-      function green(){
-        document.getElementById("cont").style.backgroundColor = "#90EE90";
-      }
-
-      function pink(){
-        document.getElementById("cont").style.backgroundColor = "#ff91a4";
-      }
-
-      function orange(){
-        document.getElementById("cont").style.backgroundColor = "#FFA500";
-      }
-
-
-      function saveContent(){
-        var n = document.getElementById("name");
-        var ct = document.getElementById("ctc");
-        var w = document.getElementById("word");
-        var e = document.getElementById("ED");
-        var a = document.getElementById("add");
-
-        localStorage.setItem("name", n.value);
-        localStorage.setItem("ctc", ct.value);
-        localStorage.setItem("word", w.value);
-        localStorage.setItem("ED", e.value);
-        localStorage.setItem("add", a.value);
-        alert("Content Saved!")
-        window.location.reload();
-      }
-
-      function loadContent(){
-        var n = document.getElementById("name");
-        var ct = document.getElementById("ctc");
-        var w = document.getElementById("word");
-        var e = document.getElementById("ED");
-        var a = document.getElementById("add");
-
-        n.value = localStorage.getItem("name");
-        ct.value = localStorage.getItem("ctc");
-        w.value = localStorage.getItem("word");
-        e.value = localStorage.getItem("ED");
-        a.value = localStorage.getItem("add");
-      }
-
-      function fillContent(){
-        var n = document.getElementById("name");
-        var ct = document.getElementById("ctc");
-        var w = document.getElementById("word");
-        var e = document.getElementById("ED");
-        var a = document.getElementById("add");
-
-        n1.innerHTML = localStorage.getItem("name");
-        ctc1.innerHTML = localStorage.getItem("ctc");
-        wording.innerHTML = localStorage.getItem("word");
-        e1.innerHTML = localStorage.getItem("ED");
-        add1.innerHTML = localStorage.getItem("add");
-      }
-
-      </script>
+    <title></title>
   </head>
-  <body onload="fillContent()">
-  <div class="maincontainer">
-      <div class="side"> <!-- background colorchange nav-->
-        <label>Pick Your Background Color</label>
-        <br><br>
-        <button type="button" onclick="white()">White</button>
-        <br>
-        <button type="button" onclick="blue()">Blue</button>
-        <br>
-        <button type="button" onclick="yellow()">Yellow</button>
-        <br>
-        <button type="button" onclick="green()">Green</button>
-        <br>
-        <button type="button" onclick="pink()">Pink</button>
-        <br>
-        <button type="button" onclick="orange()">Orange</button>
-        <br><br>
+  <style media="screen">
 
-        <div class="input">
-          <label>Insert info below:</label>
-          <br><br>
-          <input type="text" placeholder="Name" id="name">
-          <input type="text" placeholder="Contact Number" id="ctc">
-          <input type="text" placeholder="Business  Description" id="word">
-          <input type="email" placeholder="Email Address" id="ED">
-          <input type="text" placeholder="Address" id="add">
-          <br><br>
-          <button onclick="saveContent()">Save</button>
-          <button onclick="loadContent()">Load</button>
-          <br></br>
-          <div class="back1">
-          <a href="MainPage.html" >Home</a>
-          </div>
+    .rows{
+      width:1000px; height:300px;
+      margin-top:100px; margin-left:auto; margin-right:auto;
+      display: grid;
+      grid-template-areas:
+      "pic1 pic2";
+    }
+
+    .pictures{
+      width: 500px; height: 290px;
+      background-image:url("card-1.png");
+      background-size:100% 100%;
+    }
+
+    .pictures1{
+      width: 500px; height: 290px;
+      background-image:url("card-2.png");
+      background-size:100% 100%;
+    }
+    body {
+      background-image: url("Corporate.jpg");
+      display: block;
+      float: left;
+      width: 100%;
+      height:100vh ;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+    .title{
+        font-style: bold;
+        font-family: serif;
+        color: white;
+      }
+  </style>
+
+  <body>
+    <header>
+      <a href="#">Home</a>
+      <a href="#">Formal</a>
+      <a href="#">Informal</a>
+    </header>
+<h1 class="title"><center>CORPORATE</h1></center>
+  <h2 class="title"><center> SELECT YOUR DESIRED TEMPLATES </h2></center>
+    <div class="rows">
+        <div class="pictures" style="grid-area:pic1">
         </div>
 
-      </div>
-
-
-
-    <div class="card">
-
-   <center><h1 id="okay">CORPORATE</h1>
-
-      <div class="container" id="cont">
-        <div>
-        <h1  id="n1" placeholder="Name" class="text"></h1>
-        <h3  id="ctc1" placeholder="Contact Number" class="text"></h3>
-        <h3  id="wording" placeholder="Business  Description" class="text"></h3>
-        <h3 id="e1" placeholder="Email Address" class="text"></h3>
-        <h3 id=add1 placeholder="Address" class="text"></h3>
-
+        <div class="pictures1" style="grid-area:pic2">
         </div>
-        </div>
-
-      </div></center>
     </div>
 
-
-
-
+      <footer>
+      </footer>
+    </div>
   </body>
-
-
 </html>
