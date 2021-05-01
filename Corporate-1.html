@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Corporate emplate</title>
+    <title>Corporate Template 1</title>
     <link rel="stylesheet" href="Corporate-1.css">
     <script>
       /*background color change*/
@@ -76,11 +76,54 @@
         add1.innerHTML = localStorage.getItem("add");
       }
 
+      function allowDrop(ev){
+        ev.preventDefault();
+      }
+
+      function drag(ev){
+        ev.dataTransfer.setData("text", ev.target.id);
+      }
+
+      function drop(ev){
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        var isLeft = "drag1" == data;
+        var nodeCopy = document.getElementById(data).cloneNode(true);
+        nodeCopy.id = "img" + ev.target.id;
+        if(!isLeft){
+          sourceCode = document.getElementById(data);
+          sourceNode.parentNode.removeChild(sourceNode);
+        }
+        ev.target.appendChild(nodeCopy);
+        ev.stopPropagation();
+        return false;
+      }
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+
       </script>
   </head>
   <body onload="fillContent()">
   <div class="maincontainer">
       <div class="side"> <!-- background colorchange nav-->
+        <label>Drag Logo to top right corner of the template</label>
+        <br><br>
+        <img src="Logo.png" id="drag1" draggable="true" ondragstart="drag(event)">
+        <br><br>
         <label>Pick Your Background Color</label>
         <br><br>
         <button type="button" onclick="white()">White</button>
@@ -107,10 +150,6 @@
           <br><br>
           <button onclick="saveContent()">Save</button>
           <button onclick="loadContent()">Load</button>
-          <br></br>
-          <div class="back1">
-          <a href="MainPage.html" >Home</a>
-          </div>
         </div>
 
       </div>
@@ -119,23 +158,34 @@
 
     <div class="card">
 
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn" >  &#8942; </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="MainPage.html"> Home </a>
+          <a href="FormalPage.html"> Formal Template </a>
+          <a href="InformalPage.html"> Informal Template </a>
+          <a href="Corporate-2.html"> Corporate Template-2 </a>
+        </div>
+
+      </div>
    <center><h1 id="okay">CORPORATE</h1>
 
       <div class="container" id="cont">
         <div>
+          <div id="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+          </div>
         <h1  id="n1" placeholder="Name" class="text"></h1>
         <h3  id="ctc1" placeholder="Contact Number" class="text"></h3>
         <h3  id="wording" placeholder="Business  Description" class="text"></h3>
         <h3 id="e1" placeholder="Email Address" class="text"></h3>
         <h3 id=add1 placeholder="Address" class="text"></h3>
 
-        </div>
-        </div>
 
+        </div>
+      </div>
       </div></center>
     </div>
-
-
 
 
   </body>
