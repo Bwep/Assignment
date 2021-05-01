@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formal ECard</title>
+    <link rel="stylesheet" href="formalcard.css">
+    <script>
+      /*background color change*/
+      function white(){
+        document.getElementById("frame1").style.backgroundColor = "bg1.png";
+      }
+
+      function blue(){
+        document.getElementById("cont").style.backgroundColor = "lightblue";
+      }
+
+      function yellow(){
+        document.getElementById("cont").style.backgroundColor = "#FFFF99";
+      }
+
+      function green(){
+        document.getElementById("cont").style.backgroundColor = "#90EE90";
+      }
+
+      function pink(){
+        document.getElementById("cont").style.backgroundColor = "#ff91a4";
+      }
+
+      function orange(){
+        document.getElementById("cont").style.backgroundColor = "#FFA500";
+      }
+
+
+      function saveContent(){
+        var gn = document.getElementById("groomname");
+        var bn = document.getElementById("bridename")
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+        localStorage.setItem("name", n.value);
+        localStorage.setItem("date", d.value);
+        localStorage.setItem("time", t.value);
+        localStorage.setItem("place", p.value);
+        alert("Content Saved!")
+        window.location.reload();
+      }
+
+      function loadContent(){
+        var gn = document.getElementById("groomname");
+        var bn = document.getElementById("bridename")
+        var d = document.getElementById("date");
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+
+        gn.value = localStorage.getItem("groomname");
+        bn.value = localStorage.getItem("bridename");
+        d.value = localStorage.getItem("date");
+        t.value = localStorage.getItem("time");
+        p.value = localStorage.getItem("place");
+        r.value = localStorage.getItem("rsvp");
+      }
+
+      function fillContent(){
+        var gn = document.getElementById("groomname");
+        var bn = document.getElementById("bridename")
+        var d = document.getElementById("date");
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+        name1.innerHTML = localStorage.getItem("groomname");
+        name2.innerHTML = localStorage.getItem("bridename");
+        date1.innerHTML = localStorage.getItem("date");
+        time1.innerHTML = localStorage.getItem("time");
+        place1.innerHTML = localStorage.getItem("place");
+        rsvp1.innerHTML = localstorage.getItem("rsvp");
+      }
+
+      </script>
+  </head>
+  <body onload="fillContent()">
+  <div class="maincontainer">
+      <div class="side"> <!-- background colorchange nav-->
+        <label>Choose your backround</label>
+        <br><br>
+        <button type="button" onclick="white()">White</button>
+        <br>
+        <button type="button" onclick="blue()">Blue</button>
+        <br>
+        <button type="button" onclick="yellow()">Yellow</button>
+        <br>
+        <button type="button" onclick="green()">Green</button>
+        <br>
+        <button type="button" onclick="pink()">Pink</button>
+        <br>
+        <button type="button" onclick="orange()">Orange</button>
+        <br><br>
+
+        <div class="input">
+          <label>Insert info below:</label>
+          <br><br>
+          <input type="text" placeholder="Enter Groom's Name" id="groomname">
+          <input type="text" placeholder="Enter Bride's Name" id="bridename">
+          <input type="text" placeholder="Enter Date" id="date">
+          <input type="text" placeholder="Enter Time" id="time">
+          <input type="text" placeholder="Enter Place" id="place">
+          <input type="text" placeholder="Enter Contact Number" id="rsvp">
+          <br><br>
+          <button onclick="saveContent()">Save</button>
+          <button onclick="loadContent()">Load</button>
+          <br></br>
+          <div class="back1">
+          <a href="FormalPage.html" >Back</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    <div class="card">
+
+
+      <div class="frame" id="frame1">
+        <div class="text">
+        <h1 id="headline" class="text">Save the date!</h1>
+        <h4 id="reception" class="text">For the reception  of</h4>
+        <h3 id="name1" class="text">Enter Name</h3>
+        <h5 id="and1" class="text">and</h5>
+        <h3 id="name2" class="text">Enter Name</h3>
+        <p id= "date1" class="text">Date : Saturday , 04th June 2020</p>
+        <p id="time1" class="text">Time : 7.30pm-9pm</p>
+        <p id="place1" class="text">Place : The Rizqun Hotel</p>
+        <p id="rsvp1" class="text">RSVP : 8885555</p>
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+
+</html>
