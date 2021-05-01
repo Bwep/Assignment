@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formal ECard 2</title>
+    <link rel="stylesheet" href="formalcard2.css">
+    <script>
+      /*background color change*/
+      function white(){
+        document.getElementById("frame1").style.backgroundColor = "white";
+      }
+
+      function blue(){
+        document.getElementById("cont").style.backgroundColor = "lightblue";
+      }
+
+      function yellow(){
+        document.getElementById("cont").style.backgroundColor = "#FFFF99";
+      }
+
+      function green(){
+        document.getElementById("cont").style.backgroundColor = "#90EE90";
+      }
+
+      function pink(){
+        document.getElementById("cont").style.backgroundColor = "#ff91a4";
+      }
+
+      function orange(){
+        document.getElementById("cont").style.backgroundColor = "#FFA500";
+      }
+
+
+      function saveContent(){
+        var pn = document.getElementById("occasionname")
+        var d = document.getElementById("date");
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+        localStorage.setItem("partyname", pn.value);
+        localStorage.setItem("date", d.value);
+        localStorage.setItem("time", t.value);
+        localStorage.setItem("place", p.value);
+        localStorage.setItem("rsvp", r.value");
+        alert("Content Saved!")
+        window.location.reload();
+      }
+
+      function loadContent(){
+        var pn = document.getElementById("occasionname")
+        var d = document.getElementById("date");
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+
+        pn.value = localStorage.getItem("occasionname");
+        d.value = localStorage.getItem("date");
+        t.value = localStorage.getItem("time");
+        p.value = localStorage.getItem("place");
+        r.value = localStorage.getItem("rsvp");
+      }
+
+      function fillContent(){
+        var pn = document.getElementById("occasionname")
+        var d = document.getElementById("date");
+        var t = document.getElementById("time");
+        var p = document.getElementById("place");
+        var r = document.getElementById("rsvp");
+
+        partyname1.innerHTML = localStorage.getItem("occasionname");
+        date1.innerHTML = localStorage.getItem("date");
+        time1.innerHTML = localStorage.getItem("time");
+        place1.innerHTML = localStorage.getItem("place");
+        rsvp1.innerHTML = localstorage.getItem("rsvp");
+      }
+
+      </script>
+  </head>
+  <body onload="fillContent()">
+  <div class="maincontainer">
+      <div class="side"> <!-- background colorchange nav-->
+        <label>Choose Your Background</label>
+        <br><br>
+        <button type="button" onclick="white()">White</button>
+        <br>
+        <button type="button" onclick="blue()">Blue</button>
+        <br>
+        <button type="button" onclick="yellow()">Yellow</button>
+        <br>
+        <button type="button" onclick="green()">Green</button>
+        <br>
+        <button type="button" onclick="pink()">Pink</button>
+        <br>
+        <button type="button" onclick="orange()">Orange</button>
+        <br><br>
+
+        <div class="input">
+          <label>Insert info below:</label>
+          <br><br>
+          <input type="text" placeholder="Enter Name of Occasion" id="occasionname">
+          <input type="text" placeholder="Enter Date" id="date">
+          <input type="text" placeholder="Enter Time" id="time">
+          <input type="text" placeholder="Enter Place" id="place">
+          <input type="text" placeholder="Enter Contact Number" id="rsvp">
+          <br><br>
+          <button onclick="saveContent()">Save</button>
+          <button onclick="loadContent()">Load</button>
+          <br></br>
+          <div class="back1">
+          <a href="FormalPage.html" >Back</a>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    <div class="card">
+
+
+      <div class="frame" id="frame1">
+        <div class="text">
+        <h3 id="headline" class="text">please join us for</h3>
+        <h1 id="occasionname1" class="text">Thanksgiving Dinner Party</h1>
+        <h4 id="honor" class="text">in the honor of</h4>
+        <h1 id="name1" class="text">Alyssa McKenzie</h1>
+        <p id= "date1" class="text">On Thursday, 04th June 2020</p>
+        <p id="time1" class="text">Time : 7.30pm-10pm</p>
+        <p id="place1" class="text">At Serinity by Berqat Foods</p>
+        <p id="rsvp1" class="text">RSVP : 8394631</p>
+
+        </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+
+
+</html>
