@@ -3,134 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <script>
-    function myFunction() {
-      document.getElementById("myDropdown").classList.toggle("show");
-    }
-
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
-      }
-    }
-    </script>
+      <link rel="stylesheet" href="FormalPage.css">
   </head>
-  <style media="screen">
-
-    .rows{
-      width:1000px; height:300px;
-      margin-top:100px; margin-left:auto; margin-right:auto;
-      display: grid;
-      grid-template-areas:
-      "pic1 pic2";
-    }
-
-    .pictures{
-      width: 500px; height: 290px;
-      background-image:url("card-1.jpeg");
-      background-size:100% 100%;
-    }
-
-    .pictures1{
-      width: 500px; height: 290px;
-      background-image:url("card-2.jpeg");
-      background-size:100% 100%;
-    }
-    body {
-      background-image: url("Corporate.jpg");
-      display: block;
-      float: left;
-      width: 100%;
-      height:100vh ;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-  }
-    .title{
-        font-style: bold;
-        font-family: serif;
-        color: white;
-      }
-      .dropbtn {
-        background-size: 100% 100%;
-        color: white;
-        padding: 16px;
-        font-size: 16px;
-        border: 0;
-        cursor: pointer;
-      }
-
-      .dropbtn:hover, .dropbtn:focus {
-        background-color: #2980B9;
-      }
-
-      .dropdown {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-
-      .dropdown img {
-        width: 50px;
-        height: 50px;
-      }
-
-      .dropdown button {
-        border: 0;
-      }
-
-      .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-      }
-
-      .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-      }
-
-      .dropdown a:hover {background-color: #ddd;}
-
-      .show {display: block;}
-  </style>
-
   <body>
-    <header>
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn" >  &#8942; </button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="MainPage.html"> Home </a>
-          <a href="FormalPage.html"> Formal Template </a>
-          <a href="InformalPage.html"> Informal Template </a>
-        </div>
-      </div>
-    </header>
-<h1 class="title"><center>CORPORATE</h1></center>
-  <h2 class="title"><center> SELECT YOUR DESIRED TEMPLATES </h2></center>
-    <div class="rows">
-      <a href="Corporate-1.html">  <div class="pictures" style="grid-area:pic1">
-      </div></a>
+    <div>
+      <ul id="nav-header"> <!--nav bar header -->
+        <li class="nav-section active">
+          <a href="MainPage.html" class="nav-section-text">CORPORATE TEMPLATES</a>
+        </li>
+        </ul>
 
-        <a href="Corporate-2.html"> <div class="pictures1" style="grid-area:pic2">
-        </div></a>
-    </div>
+    </div> <!-- end top nav cointainer-->
 
-      <footer>
-      </footer>
+    <div id="bg-img"> <!-- bg image container-->
+    <h1> SELECT YOUR DESIRED TEMPLATES </h1>
+
+    <!--<img src="Informal1.png" class="temp1"> <!--Corporate Template 1-->
+
+    <!--<img src="Balloons.png" class="temp2"> <!--COrporate Template 2-->
+
+
+</div>
+
+
+
+
+  <footer>
+    <div class="border">
     </div>
+  </footer>
+
+  </body> <!-- end bg container-->
+
   </body>
 </html>
