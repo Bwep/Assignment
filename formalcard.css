@@ -17,6 +17,7 @@ margin-top: 100px;
   position: relative;
   background: url("wc2.jpg");
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 600px;
   width: 400px;
   margin: 65px auto;
