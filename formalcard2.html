@@ -10,24 +10,24 @@
         document.getElementById("frame1").style.backgroundColor = "white";
       }
 
-      function blue(){
-        document.getElementById("cont").style.backgroundColor = "lightblue";
+      function salmon(){
+        document.getElementById("frame1").style.backgroundColor = "#E59866";
       }
 
-      function yellow(){
-        document.getElementById("cont").style.backgroundColor = "#FFFF99";
+      function electricblue(){
+        document.getElementById("frame1").style.backgroundColor = "#51ECE4";
       }
 
-      function green(){
-        document.getElementById("cont").style.backgroundColor = "#90EE90";
+      function candyapple(){
+        document.getElementById("frame1").style.backgroundColor = "#F13232";
       }
 
-      function pink(){
-        document.getElementById("cont").style.backgroundColor = "#ff91a4";
+      function blonde(){
+        document.getElementById("frame1").style.backgroundColor = "#F7DC6F";
       }
 
-      function orange(){
-        document.getElementById("cont").style.backgroundColor = "#FFA500";
+      function lavender(){
+        document.getElementById("frame1").style.backgroundColor = "#C97DF3";
       }
 
 
@@ -38,11 +38,11 @@
         var p = document.getElementById("place");
         var r = document.getElementById("rsvp");
 
-        localStorage.setItem("partyname", pn.value);
+        localStorage.setItem("occasionname", pn.value);
         localStorage.setItem("date", d.value);
         localStorage.setItem("time", t.value);
         localStorage.setItem("place", p.value);
-        localStorage.setItem("rsvp", r.value");
+        localStorage.setItem("rsvp", r.value);
         alert("Content Saved!")
         window.location.reload();
       }
@@ -85,15 +85,15 @@
         <br><br>
         <button type="button" onclick="white()">White</button>
         <br>
-        <button type="button" onclick="blue()">Blue</button>
+        <button type="button" onclick="salmon()">Salmon</button>
         <br>
-        <button type="button" onclick="yellow()">Yellow</button>
+        <button type="button" onclick="electricblue()">Electric Blue</button>
         <br>
-        <button type="button" onclick="green()">Green</button>
+        <button type="button" onclick="candyapple()">Candy Apple</button>
         <br>
-        <button type="button" onclick="pink()">Pink</button>
+        <button type="button" onclick="blonde()">Blonde</button>
         <br>
-        <button type="button" onclick="orange()">Orange</button>
+        <button type="button" onclick="lavender()">Lavender</button>
         <br><br>
 
         <div class="input">
