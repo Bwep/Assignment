@@ -33,12 +33,14 @@
 
       function saveContent(){
         var pn = document.getElementById("occasionname");
+        var n = document.getElementById("name");
         var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
         var r = document.getElementById("rsvp");
 
         localStorage.setItem("occasionname", pn.value);
+        localStorage.setItem("name", n.value);
         localStorage.setItem("date", d.value);
         localStorage.setItem("time", t.value);
         localStorage.setItem("place", p.value);
@@ -49,6 +51,7 @@
 
       function loadContent(){
         var pn = document.getElementById("occasionname");
+        var n = document.getElementById("name");
         var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
@@ -56,6 +59,7 @@
 
 
         pn.value = localStorage.getItem("occasionname");
+        n.value = localStorage.getItem("name");
         d.value = localStorage.getItem("date");
         t.value = localStorage.getItem("time");
         p.value = localStorage.getItem("place");
@@ -64,12 +68,14 @@
 
       function fillContent(){
         var pn = document.getElementById("occasionname");
+        var n = document.getElementById("name");
         var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
         var r = document.getElementById("rsvp");
 
-        partyname1.innerHTML = localStorage.getItem("occasionname");
+        occasionname1.innerHTML = localStorage.getItem("occasionname");
+        name1.innerHTML = localStorage.getItem("name");
         date1.innerHTML = localStorage.getItem("date");
         time1.innerHTML = localStorage.getItem("time");
         place1.innerHTML = localStorage.getItem("place");
@@ -100,6 +106,7 @@
           <label>Insert info below:</label>
           <br><br>
           <input type="text" placeholder="Enter Name of Occasion" id="occasionname">
+          <input type="text" placeholder="Enter Name" id="name">
           <input type="text" placeholder="Enter Date" id="date">
           <input type="text" placeholder="Enter Time" id="time">
           <input type="text" placeholder="Enter Place" id="place">
@@ -122,14 +129,14 @@
 
       <div class="frame" id="frame1">
         <div class="text">
-        <h3 id="headline" class="text">please join us for</h3>
-        <h1 id="occasionname1" class="text">Thanksgiving Dinner Party</h1>
-        <h4 id="honor" class="text">in the honor of</h4>
-        <h1 id="name1" class="text">Alyssa McKenzie</h1>
-        <p id= "date1" class="text">On Thursday, 04th June 2020</p>
-        <p id="time1" class="text">Time : 7.30pm-10pm</p>
-        <p id="place1" class="text">At Serinity by Berqat Foods</p>
-        <p id="rsvp1" class="text">RSVP : 8394631</p>
+        <h3 id="headline" placeholder="please join us for" class="text"></h3>
+        <h1 id="occasionname1" placeholder="Thanksgiving Dinner Party" class="text"></h1>
+        <h4 id="honor" placeholder="in the honor of"class="text"></h4>
+        <h1 id="name1"  placeholder="Alyssa McKenzie"class="text"></h1>
+        <p id= "date1"  placeholder="On Thursday, 04th June 2020"class="text"></p>
+        <p id="time1"  placeholder="Time : 7.30pm-10pm"class="text"></p>
+        <p id="place1"  placeholder="At Serinity by Berqat Foods"class="text"></p>
+        <p id="rsvp1"  placeholder="RSVP : 8394631"class="text"></p>
 
         </div>
         </div>
