@@ -15,7 +15,8 @@ margin-top: 100px;
 
 .frame{
   background: url("Border2.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
   height: 400px;
   width: 600px;
   margin: 160px auto;
