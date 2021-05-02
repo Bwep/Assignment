@@ -106,14 +106,38 @@
         return false;
       }
 
+      function picker(value){
+        var texts = document.getElementById("greetOne");
+        if (value==1){
+          texts.innerHTML = "السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ";
+        }
+        else if (value==2){
+          texts.innerHTML = "Salam Sejahtera!";
+        }
+        else if (value==3){
+          texts.innerHTML = "Greetings!";
+        }
+      }
+
+
+
       </script>
   </head>
   <body onload="fillContent()">
   <div class="maincontainer">
       <div class="side"> <!-- background colorchange nav-->
-        <label>Dragable Logo</label>
+      <label> Select greetings </label>
+      <br><br>
+        <select id="selection" onchange="picker(this.value)">
+          <option value="0"></option>
+          <option value="1">Assalamualaikum</option>
+          <option value="2">Salam Sejahtera!</option>
+          <option value="3">Greetings!</option>
+        </select>
         <br><br>
-        <img src="ring.png" id="drag1" draggable="true" ondragstart="drag(event)">
+        <label>Draggable Logo</label>
+        <br><br>
+        <img src="invited.png" id="drag1" draggable="true" ondragstart="drag(event)">
         <br><br>
         <label>Pick Your Background Color</label>
         <br><br>
@@ -130,12 +154,15 @@
         <button type="button" onclick="orange()">Orange</button>
         <br><br>
 
+
+
         <div class="input">
           <label>Insert info below:</label>
           <br><br>
+
+          <input type="text" placeholder="Reciepient's Name" id="name1">
+          <input type="text" placeholder="Host's Name" id="name2">
           <input type="text" placeholder="Event" id="event">
-          <input type="text" placeholder="Name1" id="name1">
-          <input type="text" placeholder="Name2" id="name2">
           <input type="text" placeholder="Date" id="date">
           <input type="text" placeholder="Time" id="time">
           <input type="text" placeholder="RSVP" id="rsvp">
@@ -146,7 +173,6 @@
           <div class="back1">
           <a href="MainPage.html" >Back</a>
           </div>
-
         </div>
 
 
@@ -159,16 +185,18 @@
 
 
       <div class="container" id="cont">
+
+        <div class="text">
+
+        <h4 id="greetOne" placeholder="Greetings here" class="text1"></h4>
+        <h3 id="n1" placeholder="Reciepient's Name" class="text1"></h3>
         <div id="dragdrop" ondrop="drop(event)" ondragover="allowDrop(event)">
         </div>
-        <div class="text">
-        <h2 id="e1" placeholder="Event" class="text1"></h2>
-        <h3 id="n1" placeholder="Name1" class="text1"></h3>
-        <p> && </p>
-        <h3 id="n2" placeholder="Name2" class="text1"></h3>
-        <h6 id="date1" placeholder="Date : " class="text1"></h6>
-        <h6 id=time1 placeholder="Time : " class="text1"></h6>
-        <h6 id=rsvp1 placeholder="RSVP : " class="text1"></h6>
+        <h2 id="n2" placeholder="Host's Name" class="text1"></h2>
+        <h1 id="e1" placeholder="Event" class="text1"></h1>
+        <h5 id="date1" placeholder="Date : " class="text1"></h5>
+        <h5 id=time1 placeholder="Time : " class="text1"></h5>
+        <h5 id=rsvp1 placeholder="RSVP : " class="text1"></h5>
 
         </div>
         </div>

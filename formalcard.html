@@ -7,48 +7,51 @@
     <script>
       /*background color change*/
       function white(){
-        document.getElementById("frame1").style.backgroundColor = "bg1.png";
+        document.getElementById("frame1").style.backgroundColor = "white";
       }
 
-      function blue(){
-        document.getElementById("cont").style.backgroundColor = "lightblue";
+      function rosepink(){
+        document.getElementById("frame1").style.backgroundColor = "#F15BC3";
       }
 
-      function yellow(){
-        document.getElementById("cont").style.backgroundColor = "#FFFF99";
+      function teal(){
+        document.getElementById("frame1").style.backgroundColor = "#48C9B0";
       }
 
-      function green(){
-        document.getElementById("cont").style.backgroundColor = "#90EE90";
+      function silver(){
+        document.getElementById("frame1").style.backgroundColor = "#C0C0C0";
       }
 
-      function pink(){
-        document.getElementById("cont").style.backgroundColor = "#ff91a4";
+      function lilac(){
+        document.getElementById("frame1").style.backgroundColor = "#AF7AC5";
       }
 
-      function orange(){
-        document.getElementById("cont").style.backgroundColor = "#FFA500";
+      function royalblue(){
+        document.getElementById("frame1").style.backgroundColor = "#6495ED";
       }
 
 
       function saveContent(){
         var gn = document.getElementById("groomname");
-        var bn = document.getElementById("bridename")
+        var bn = document.getElementById("bridename");
+        var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
         var r = document.getElementById("rsvp");
 
-        localStorage.setItem("name", n.value);
+        localStorage.setItem("groomname", gn.value);
+        localStorage.setItem("bridename", bn.value);
         localStorage.setItem("date", d.value);
         localStorage.setItem("time", t.value);
         localStorage.setItem("place", p.value);
+        localStorage.setItem("rsvp", r.value);
         alert("Content Saved!")
         window.location.reload();
       }
 
       function loadContent(){
         var gn = document.getElementById("groomname");
-        var bn = document.getElementById("bridename")
+        var bn = document.getElementById("bridename");
         var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
@@ -65,7 +68,7 @@
 
       function fillContent(){
         var gn = document.getElementById("groomname");
-        var bn = document.getElementById("bridename")
+        var bn = document.getElementById("bridename");
         var d = document.getElementById("date");
         var t = document.getElementById("time");
         var p = document.getElementById("place");
@@ -83,20 +86,20 @@
   </head>
   <body onload="fillContent()">
   <div class="maincontainer">
-      <div class="side"> <!-- background colorchange nav-->
-        <label>Choose your backround</label>
+      <div class="side">
+        <label>Choose your background</label>
         <br><br>
         <button type="button" onclick="white()">White</button>
         <br>
-        <button type="button" onclick="blue()">Blue</button>
+        <button type="button" onclick="rosepink()">Rose Pink</button>
         <br>
-        <button type="button" onclick="yellow()">Yellow</button>
+        <button type="button" onclick="teal()">Teal</button>
         <br>
-        <button type="button" onclick="green()">Green</button>
+        <button type="button" onclick="silver()">Silver</button>
         <br>
-        <button type="button" onclick="pink()">Pink</button>
+        <button type="button" onclick="lilac()">Lilac</button>
         <br>
-        <button type="button" onclick="orange()">Orange</button>
+        <button type="button" onclick="royalblue()">Royal Blue</button>
         <br><br>
 
         <div class="input">
@@ -126,15 +129,15 @@
 
       <div class="frame" id="frame1">
         <div class="text">
-        <h1 id="headline" class="text">Save the date!</h1>
-        <h4 id="reception" class="text">For the reception  of</h4>
-        <h3 id="name1" class="text">Enter Name</h3>
-        <h5 id="and1" class="text">and</h5>
-        <h3 id="name2" class="text">Enter Name</h3>
-        <p id= "date1" class="text">Date : Saturday , 04th June 2020</p>
-        <p id="time1" class="text">Time : 7.30pm-9pm</p>
-        <p id="place1" class="text">Place : The Rizqun Hotel</p>
-        <p id="rsvp1" class="text">RSVP : 8885555</p>
+        <h1 id="headline" placeholder="Save the date!"class="text">Save the date!</h1>
+        <h3 id="reception" placeholder="For the reception of" class="text"></h3>
+        <h1 id="name1" placeholder="Adam" class="text"></h1>
+        <h3 id="and1" placeholder="and" class="text"></h3>
+        <h1 id="name2" placeholder="Hannah" class="text"></h1>
+        <p id= "date1" placeholder="Date : Saturday , 04th June 2020" class="text"></p>
+        <p id="time1" placeholder="Time : 7.30pm-9pm" class="text"></p>
+        <p id="place1" placeholder="Place : The Rizqun Hotel" class="text"></p>
+        <p id="rsvp1" placeholder="RSVP : 8885555" class="text"></p>
 
         </div>
         </div>
