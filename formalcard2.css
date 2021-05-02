@@ -14,17 +14,19 @@ margin-top: 100px;
 }
 
 .frame{
-  background: url("bg2.jpg");
+  background: url("Border2.jpg");
+  background-size: cover;
   height: 400px;
   width: 600px;
   margin: 160px auto;
-  border: 3px groove black;
+  border: 5px solid black;
+  border-style: double;
 }
 
 .text{
   font-family: Impact, cursive;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 23px;
 }
 
 
