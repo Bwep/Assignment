@@ -19,12 +19,11 @@ margin-top: 100px;
   height: 400px;
   width: 600px;
   margin: 160px auto;
-  border: 5px solid black;
-  border-style: double;
+  border: 10px double black;
 }
 
 .text{
-  font-family: Impact, cursive;
+  font-family: Lucida Calligraphy;
   text-align: center;
   margin-top: 23px;
 }
