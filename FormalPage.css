@@ -82,18 +82,20 @@ h1{
   font-size: 30px;
 }
 
-.temp1, .temp2{
-  max-height: 70%;
-  max-width: 60%;
-  margin-top: 120px;
-  margin-left: 200px;
+.formal1, .formal2{
+  margin: 100px auto;
   position: relative; /*move image to left and right*/
-  left: 150px;
+  left: 400px;
 
 }
 
 .formal1{
   max-height: 70%;
   max-width: 60%;
-  margin-top: 100px;
+}
+
+.formal2{
+  max-width: 500px;
+  max-height: 400px;
+  margin-left: 50px;
 }
